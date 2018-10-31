@@ -66,4 +66,36 @@ A without the $ tag means that the computer will be expecting an integer.
 50 NEXT I
 60 PRINT "M"
 
+Math:
+Math is pretty straight-foward in BASIC. You can do simple operations with *,+,-,/ Operators. However, BASIC by default does decimal division, and not integer division. 
+
+For example
+10 PRINT 2/3
+
+will output
+
+.666666667
+
+
+LET:
+The LET command is what's called an "arithmetic variable". These are variables that can be assigned arithmetic functions.
+
+For Example:
+
+10 LET X = 5*3
+20 PRINT x
+
+Output: 15
+
+If you do not use the let command when storing operations, the code will not return anything.
+
+10 X = 5*3
+20 PRINT X
+
+Output: [no output]
+
+You could also use let to store regular integers.
+
+Integers up to 1,000,000,000 will begin to display in scientific notation. Anything past 1E+38 will overflow.
+
 
