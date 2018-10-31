@@ -45,6 +45,8 @@ HELLO
 HELLO
 GOODBYE
 
+The domain of the loop is inclusive (in the example, 1 and 3 are included)
+
 FOR Loops as timers:
 Since the BASIC OS on the C64 is slow, you can make timers by using for loops. Counting from 1 to 1,000 can take up to a second. Because of this, you can use a simple for loop that counts to 1,000 to set a timer of one second. Of course, the actual time it takes to count to these numbers depend on the computer.
 
