@@ -1,0 +1,67 @@
+1: Line Numbers
+In BASIC, you write out your own line numbers. Goood BASIC programmers get in the habit of writing their lines in multiples of 10 in the case that they should go back and add more lines in  between. You can clear a line by typing the line number. You can also view a specific line with the LIST command (LIST 239) or even list a range of line numbers (LIST 453-983)
+
+2: Print Command
+This is the most basic command of the basic language. It just prints characters to the string under quotation marks. There are, however a few neat things with Commodore 64's BASIC Print command. One of them is that when you type the first quotation mark, any non-character key, such as the cursor down key will print the character reperesentation of that command to the print statement. When you run the program, it will execute that command.
+
+One feature of the print command is the option to cocatenate strings. By default, each seperate print statement makes a newline. However strings seperated by a semicolon (;) will be concatenated. 
+
+Another feature of the print command is the feature of seperating two strings with a comma. The syntax for this would be (PRINT "FOO","BAR'). Instead of adding the two strings together, it seperates the strings into columns. The example output would be (FOO       BAR       ). Each column is 10 characters long on the Commodore 64. The number of characters for each column depends on the model of computer. For example, the IBM and TI have 14 characters and the Apple has 16 characters.
+
+
+Each PRINT statement makes a new line, unless a comma or semicolon is involved. Commas will put text on a single line. You can make an empty new line (equivilent to \n) with an empty print command.
+
+3: For Loops
+For loops in BASIC is pretty... basic. The syntax goes as follows
+10 FOR I = 1 TO 4
+20 PRINT "HELLO"
+30 NEXT I
+
+Lines 10 - 30 would be your block of code for the for loop. The incrementation occurs on the bottom of the block with the NEXT command, with the name of your variable (I) as its parameter. 
+
+Here's an example of a nested for loop in BASIC
+
+5 FOR J = 1 TO 3
+10 FOR I = 1 TO 4
+20 PRINT "HELLO"
+30 NEXT I
+40 PRINT "GOODBYE"
+50 NEXT J
+
+Output:
+HELLO
+HELLO
+HELLO
+HELLO
+GOODBYE
+HELLO
+HELLO
+HELLO
+HELLO
+GOODBYE
+HELLO
+HELLO
+HELLO
+HELLO
+GOODBYE
+
+FOR Loops as timers:
+Since the BASIC OS on the C64 is slow, you can make timers by using for loops. Counting from 1 to 1,000 can take up to a second. Because of this, you can use a simple for loop that counts to 1,000 to set a timer of one second. Of course, the actual time it takes to count to these numbers depend on the computer.
+
+:Input
+The syntax for waiting for a user's input goes as follows:
+
+10 INPUT A$
+
+A$ is the variable name for the input. The $ tagged at the end of the variable name means that the computer will be expecting a string input. 
+A without the $ tag means that the computer will be expecting an integer.
+
+10 PRINT "HOW MANY A'S ARE IN SIAAM TODAY?"
+20 INPUT A
+25 PRINT "SI";
+30 FOR I = 1 TO A
+40 PRINT "A";
+50 NEXT I
+60 PRINT "M"
+
+
