@@ -1,0 +1,46 @@
+---UNDERSTANDING 6502 ASSEMBLY---
+
+Registers:
+There are 3 main registers in 6502 assembly
+
+A - Accumulator
+X - Index Register X
+Y - Index Register Y
+
+
+Operations work on the contents of the registers
+
+---------------------------------------------------------------------------
+The Accumulator:
+
+The accumulator is an 8 bit register that handles arithmetic and logical operations (with the execption of increments and decrements). Contents of the accumulator can be stored and retrieved from memory or from the stack. 
+
+
+
+Index Register X:
+
+Index Register X is an 8 bit register that is mostly used to hold countres or offsets for accessing memory. The value of the X register can be loaded and saved in memory and compared with other values held in memory, incremented or decremented. THe X register has a function that can be used to get a copy of the stack pointer or change its value.
+
+Index Register Y:
+
+Index Register Y is the same as Index Register X, but it holds no special functions.
+
+
+Stacks and the Stack Pointer:
+
+The 6502 Processor has a 256 byte stack located in memory addresses $0100 and $01FF. 
+SP, the stack pointer is an 8 bit register that decrements every time a byte is pushed on to the stack and incremented when a byte is popped off from a stack
+The stack pointer holds the low 8 bits of the next free location on the stack. You cannot move the location of the stack. 
+-->The CPU doesn't will not check for overflow on the stack.
+
+1
+1
+1 <- SP
+
+Program Counter:
+PC is the program counter. The program counter is a 16 bit register that keeps track of where we are in the program. It will always start at a certain memory location such as $0600. The value of the program counter is modified automatically as instructions are executed. It can also be modified by executing a jump, relative branch or a subroutine call to another memory address or returning from a subroutine or interrupt.
+
+Processor Flags:
+Each flag is one bit. Processor flags are set by the processor to give information about the previous instruction.
+
+-----------------------------------------------------------------------------
