@@ -95,7 +95,25 @@ If you do not use the let command when storing operations, the code will not ret
 Output: [no output]
 
 You could also use let to store regular integers.
+It would probably be best to get in the habit of using the LET command when making intger variables.
+
 
 Integers up to 1,000,000,000 will begin to display in scientific notation. Anything past 1E+38 will overflow.
+
+Conditionals:
+
+The IF THEN statement is a simple conditional statement in BASIC. If the condition after the IF is true, THEN jump to a certain line number. 
+10 INPUT T
+20 IF T > 32 THEN 60
+60 PRINT "COOL"
+
+
+Conditional Operators:
+> - Greater Than
+< - Less THan
+= - Equal To
+>= - Greater than or equal to
+<= Less than or equal to
+<> - Not equal to
 
 
